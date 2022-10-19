@@ -1,0 +1,249 @@
+:root{
+    --message: rgba(0,0,0,0.6);
+    --message_font_size:0.8rem;
+    --message_title_size: 0.9rem;
+    --message_font_weight: 600;
+    --list_background: #e9e5df;
+}
+
+.new_list{
+    background-color: white;
+    margin-bottom:2px;
+    align-items: stretch; 
+    padding: 1px 10px;
+    justify-content: center;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.activity{
+    background-color: #e9e5df !important;
+    border:none;
+}
+
+.new_list:hover{
+    background-color: var(--list_background);
+    cursor: pointer;
+}
+
+.act_title{
+    font-size: va(--message_title_size);
+    font-weight: var(--message_font_weight);
+    
+}
+.news{
+    border:2px solid var(--border_color);
+    height:fit-content;
+    background-color: white;
+    border-radius: 8px;
+    padding-bottom:10px;
+    margin-bottom:15px;
+}
+
+.account_name{
+    color:rgba(0,0,0,0.6);font-size: 0.8rem;
+}
+
+.news_title{
+    font-weight: var(--message_font_weight);
+}
+
+.account_feed{
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    flex-direction: row;
+    margin-top:5px;
+    padding:10px 5px;
+    flex-wrap: wrap;
+}
+
+.account_info{
+    margin-left:5px;
+}
+
+.account_picture{
+    height:40px;
+    object-fit: contain;
+}
+
+.follow{
+    padding:5px;
+    font-size: var(--message_font_size);
+    font-weight: 500;
+    margin-top:5px;
+    border-radius: 50px;
+    text-align: center;
+    border:1px solid black;
+}
+
+.follow:hover{
+    background-color:var(--list_background);
+    cursor: pointer;
+}
+
+.news_head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:10px;
+    align-items: center;
+    padding-bottom: 0px;
+}
+
+.small_screen{
+    display: none;
+}
+
+.option_text{
+    font-size: 0.9rem;
+    font-weight: var(--message_font_weight);
+}
+.dropdown{
+    position:relative;
+}
+
+.dropdown-content{
+    display:none;
+    height:fit-content;
+    left:-190px;  
+    background-color: white;
+    border-radius:10px;
+    border:1px solid lightgray;
+    padding:5px 0px;
+    position:absolute;
+    width: 250px;
+}
+
+.dropdown .title{
+    font-size: var(--message_title_size);
+    font-weight: 600;
+    padding:10px;
+    padding-bottom:5px;  
+}
+
+.list{
+    padding:8px 10px;
+    font-size: small;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.list:hover{
+    text-decoration: underline;
+    background-color: var(--list_background);
+}
+
+.bdr_bottom{
+    border-bottom: 0.2px solid rgba(0,0,0,.15);
+}
+
+.dropdown_profile{
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    padding:10px;
+}
+
+.profile_view_button{
+    border:1px solid blue;
+    padding:5px ;
+    margin: 10px; 
+    text-align: center; 
+    border-radius: 500px;
+}
+
+@media  screen and (max-width:650px)  {
+    .sidebar, .activity{
+        display: none;
+    }
+    .mainbody{
+        margin:0px 5px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .header{
+        margin
+        :0px;
+        padding:10px;
+    }
+    .nav_text{
+        display: none;
+    }
+
+    .search_box{
+        background-color: white  !important;
+    }
+
+    .search_input{
+        display: none;
+    }
+
+    .height_right_2 > .nav_link, .right_nav_text{
+        display:none;
+    }
+
+    .small_screen{
+        display: block;
+        border-radius:50px;
+        padding:5px; 
+    }
+
+    .small_screen:hover{
+        background-color: lightgray;
+        cursor: pointer;
+    }
+
+    .bi-grid-3x3-gap-fill{
+        display: none;
+    }
+
+    .post_box{
+        margin-top:20px;
+    }
+
+    .drop{
+     display: block!important;
+    }
+}
+
+@media screen and (min-width:650px) and (max-width:1000px){
+    
+    .sidebar{display: none;}
+    .header{
+        margin:0px;
+        padding:10px;
+    }
+    .mainbody{
+        display: grid;
+        margin-top: 15px;
+        margin:0px 10px;
+        grid-template-columns: 1fr 0.5fr;
+        
+    }
+    .small_screen{
+        display: block;
+        padding:5px;
+        border-radius:50px; 
+    }
+
+    .search_input{
+        display: none;
+    }
+
+    .search_box{
+        background-color: white  !important;
+    }
+
+    .right_nav_text{
+        display:none;
+    }
+}
+
+@media screen and (min-width:375px) and (max-width:649px){
+    .jobs, .network{
+        display:none;
+    }
+}
